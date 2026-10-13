@@ -1,0 +1,140 @@
+.drawer-root {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-drawer);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--color-overlay);
+}
+
+.drawer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, var(--layout-drawer-width));
+  height: 100%;
+  padding: var(--space-4);
+  overflow: auto;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+}
+
+.drawer__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.drawer__intro {
+  min-width: 0;
+}
+
+.drawer__title {
+  font-size: var(--text-xl);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-semibold);
+}
+
+.drawer__description {
+  margin-top: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.form {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.summary {
+  margin-bottom: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid var(--color-danger);
+  border-inline-start-width: var(--space-1);
+  border-radius: var(--radius-md);
+  background: var(--color-danger-bg);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+}
+
+.summary__title {
+  font-weight: var(--font-weight-semibold);
+}
+
+.summary__text {
+  margin-top: var(--space-1);
+}
+
+.summary__list {
+  margin: var(--space-2) 0 0;
+  padding-inline-start: var(--space-5);
+}
+
+.field + .field {
+  margin-top: var(--space-2);
+}
+
+.field__hint {
+  color: var(--color-text-secondary);
+}
+
+.field__label {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  margin-bottom: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.field__optional {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-regular);
+}
+
+.required {
+  color: var(--color-danger);
+}
+
+.field__control {
+  width: 100%;
+}
+
+.field__message {
+  min-height: var(--space-5);
+  margin-top: var(--space-1);
+  color: var(--color-danger);
+  font-size: var(--text-xs);
+  line-height: var(--line-height-normal);
+}
+
+.form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 48rem) {
+  .drawer {
+    padding: var(--space-6);
+  }
+}
+
+@media (max-width: 40rem) {
+  .form__actions {
+    flex-direction: column;
+  }
+
+  .form__actions .button {
+    width: 100%;
+  }
+}

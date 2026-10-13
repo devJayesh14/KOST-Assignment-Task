@@ -1,0 +1,56 @@
+<div class="toolbar">
+  <div class="toolbar__controls">
+    <div class="search" role="search">
+      <label class="visually-hidden" for="organisation-search">
+        {{ 'toolbar.searchLabel' | translate }}
+      </label>
+      <svg class="search__icon" viewBox="0 0 20 20" aria-hidden="true">
+        <circle cx="9" cy="9" r="5.5" />
+        <path d="M13.5 13.5 17 17" />
+      </svg>
+      <input
+        id="organisation-search"
+        class="control search__input"
+        type="search"
+        dir="auto"
+        [value]="searchText()"
+        [placeholder]="'toolbar.searchPlaceholder' | translate"
+        autocomplete="off"
+        enterkeyhint="search"
+        (input)="onSearchInput($event)"
+      />
+      @if (searchText()) {
+        <button type="button" class="icon-button search__clear" (click)="searchTextChange.emit('')">
+          <span class="visually-hidden">{{ 'toolbar.clearSearch' | translate }}</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M6 6 14 14" />
+            <path d="M14 6 6 14" />
+          </svg>
+        </button>
+      }
+    </div>
+
+    <div class="status-filter">
+      <label class="status-filter__label" for="organisation-status">
+        {{ 'toolbar.statusLabel' | translate }}
+      </label>
+      <select id="organisation-status" class="control" (change)="onStatusChange($event)">
+        @for (option of statusOptions; track option) {
+          <option [value]="option" [selected]="option === status()">
+            {{ statusLabelKey(option) | translate }}
+          </option>
+        }
+      </select>
+    </div>
+
+    <button type="button" class="button button--ghost" (click)="clearFilters.emit()">
+      {{ 'toolbar.clearFilters' | translate }}
+    </button>
+  </div>
+
+  <p class="toolbar__count" aria-live="polite" aria-atomic="true">
+    @if (resultCount() !== null) {
+      {{ resultCountKey() | translate: { count: resultCount() ?? 0 } }}
+    }
+  </p>
+</div>

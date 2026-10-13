@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="container header__inner">
+    <div class="header__brand">
+      <h1 class="header__title">{{ 'app.title' | translate }}</h1>
+      <p class="header__subtitle">{{ 'app.subtitle' | translate }}</p>
+    </div>
+    <button
+      type="button"
+      class="button button--primary"
+      aria-haspopup="dialog"
+      (click)="addOrganisation.emit()"
+    >
+      <svg viewBox="0 0 20 20" aria-hidden="true">
+        <path d="M10 4v12" />
+        <path d="M4 10h12" />
+      </svg>
+      {{ 'header.addOrganisation' | translate }}
+    </button>
+  </div>
+</header>

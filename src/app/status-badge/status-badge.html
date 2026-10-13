@@ -1,0 +1,19 @@
+@if (status() === 'unknown') {
+  <span
+    class="badge"
+    data-status="unknown"
+    [attr.title]="
+      rawStatus()
+        ? ('status.recordedValue' | translate: { value: rawStatus() ?? '' })
+        : ('status.noValue' | translate)
+    "
+  >
+    <span class="badge__dot" aria-hidden="true"></span>
+    <span>{{ 'status.unknown' | translate }}</span>
+  </span>
+} @else {
+  <span class="badge" [attr.data-status]="status()">
+    <span class="badge__dot" aria-hidden="true"></span>
+    <span>{{ 'status.' + status() | translate }}</span>
+  </span>
+}

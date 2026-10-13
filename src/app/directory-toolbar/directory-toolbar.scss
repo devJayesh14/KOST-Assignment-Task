@@ -1,0 +1,72 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.toolbar__controls {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.search {
+  position: relative;
+  flex: 1 1 var(--layout-search-min);
+  min-width: min(100%, var(--layout-search-min));
+}
+
+.search__icon {
+  position: absolute;
+  top: 50%;
+  inset-inline-start: var(--space-3);
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
+  color: var(--color-text-muted);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.search__input {
+  width: 100%;
+  padding-inline-start: var(--space-8);
+  padding-inline-end: var(--space-10);
+}
+
+.search__input::-webkit-search-decoration,
+.search__input::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+.search__clear {
+  position: absolute;
+  top: 50%;
+  inset-inline-end: var(--space-2);
+  transform: translateY(-50%);
+}
+
+.status-filter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.status-filter__label {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.status-filter .control {
+  min-width: var(--size-status-select);
+}
+
+.toolbar__count {
+  margin-inline-start: auto;
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  white-space: nowrap;
+}

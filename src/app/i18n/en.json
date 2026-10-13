@@ -1,0 +1,95 @@
+{
+  "app": {
+    "skipToContent": "Skip to organisations",
+    "title": "Organisation Directory",
+    "subtitle": "Find an organisation, check its status, or add a new one."
+  },
+  "header": {
+    "addOrganisation": "Add organisation"
+  },
+  "toolbar": {
+    "searchLabel": "Search organisations by name",
+    "searchPlaceholder": "Search by organisation name",
+    "clearSearch": "Clear search",
+    "statusLabel": "Status",
+    "statusAll": "All statuses",
+    "clearFilters": "Clear filters",
+    "resultCount": "{{count}} organisations",
+    "resultCountOne": "1 organisation"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "suspended": "Suspended",
+    "unknown": "Unknown",
+    "recordedValue": "Recorded value: {{value}}",
+    "noValue": "No status recorded"
+  },
+  "table": {
+    "caption": "Organisations",
+    "organisation": "Organisation",
+    "status": "Status",
+    "members": "Members",
+    "owner": "Owner",
+    "created": "Created",
+    "loading": "Loading organisations",
+    "unnamed": "Unnamed organisation",
+    "noOwner": "No owner",
+    "invalidEmail": "Invalid email",
+    "notAvailable": "Not available",
+    "unknownDate": "Unknown date"
+  },
+  "pagination": {
+    "label": "Pagination",
+    "summary": "Showing {{from}}–{{to}} of {{total}}",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {{page}}"
+  },
+  "empty": {
+    "filteredHeading": "No organisations match",
+    "filteredMessage": "Nothing matches the current search or status filter. Clear the filters to see the full directory.",
+    "clearFilters": "Clear filters",
+    "heading": "No organisations yet",
+    "message": "Add the first organisation to start the directory."
+  },
+  "error": {
+    "heading": "Unable to load organisations",
+    "message": "The directory could not be loaded. Check the connection and try again.",
+    "retry": "Retry",
+    "rateLimitedHeading": "Too many requests",
+    "rateLimitedMessage": "The directory can be loaded at most 5 times a minute. Retrying automatically in {{seconds}} seconds.",
+    "rateLimitedRetrying": "Retrying now."
+  },
+  "form": {
+    "title": "Add organisation",
+    "description": "Enter the organisation details, then create the record.",
+    "close": "Close",
+    "nameLabel": "Organisation name",
+    "statusLabel": "Status",
+    "statusPlaceholder": "Select a status",
+    "emailLabel": "Owner email",
+    "membersLabel": "Member count",
+    "optional": "optional",
+    "required": "required",
+    "cancel": "Cancel",
+    "submit": "Create organisation",
+    "submitting": "Creating organisation…",
+    "checkingName": "Checking the name is available…",
+    "summaryTitle": "The organisation was not created.",
+    "errors": {
+      "required": "This field is required.",
+      "minlength": "Use at least {{min}} characters.",
+      "maxlength": "Use {{max}} characters or fewer.",
+      "nameTaken": "An organisation with this name already exists.",
+      "email": "Enter a valid email address, like name@example.com.",
+      "min": "Enter 0 or more.",
+      "wholeNumber": "Enter a whole number.",
+      "invalid": "Check this value.",
+      "server": "Something went wrong on our side. Try again."
+    }
+  },
+  "directory": {
+    "created": "Organisation \"{{name}}\" created."
+  }
+}

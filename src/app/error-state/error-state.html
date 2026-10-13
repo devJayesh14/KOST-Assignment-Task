@@ -1,0 +1,28 @@
+<section class="panel state state--error" role="alert">
+  <div class="state__icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8" />
+      <path d="M12 8v5" />
+      <path d="M12 16.5h.01" />
+    </svg>
+  </div>
+  @switch (reason()) {
+    @case ('rateLimited') {
+      <h2 class="state__title">{{ 'error.rateLimitedHeading' | translate }}</h2>
+      @if (retryInSeconds() > 0) {
+        <p class="state__text">
+          {{ 'error.rateLimitedMessage' | translate: { seconds: retryInSeconds() } }}
+        </p>
+      } @else {
+        <p class="state__text">{{ 'error.rateLimitedRetrying' | translate }}</p>
+      }
+    }
+    @default {
+      <h2 class="state__title">{{ 'error.heading' | translate }}</h2>
+      <p class="state__text">{{ 'error.message' | translate }}</p>
+      <button type="button" class="button button--primary" (click)="retry.emit()">
+        {{ 'error.retry' | translate }}
+      </button>
+    }
+  }
+</section>

@@ -1,0 +1,48 @@
+<nav class="pagination" [attr.aria-label]="'pagination.label' | translate">
+  <p class="pagination__summary">
+    {{ 'pagination.summary' | translate: { from: from(), to: to(), total: total() } }}
+  </p>
+
+  @if (pageCount() > 1) {
+    <ul class="pagination__list">
+      <li>
+        <button
+          type="button"
+          class="button button--ghost button--compact"
+          [disabled]="page() === 1"
+          (click)="pageChange.emit(page() - 1)"
+        >
+          {{ 'pagination.previous' | translate }}
+        </button>
+      </li>
+      @for (item of items(); track item.kind === 'page' ? item.page : item.id) {
+        <li>
+          @if (item.kind === 'page') {
+            <button
+              type="button"
+              class="page-button"
+              [class.is-current]="item.page === page()"
+              [attr.aria-current]="item.page === page() ? 'page' : null"
+              [attr.aria-label]="'pagination.page' | translate: { page: item.page }"
+              (click)="pageChange.emit(item.page)"
+            >
+              {{ item.page }}
+            </button>
+          } @else {
+            <span class="pagination__gap" aria-hidden="true">…</span>
+          }
+        </li>
+      }
+      <li>
+        <button
+          type="button"
+          class="button button--ghost button--compact"
+          [disabled]="page() === pageCount()"
+          (click)="pageChange.emit(page() + 1)"
+        >
+          {{ 'pagination.next' | translate }}
+        </button>
+      </li>
+    </ul>
+  }
+</nav>

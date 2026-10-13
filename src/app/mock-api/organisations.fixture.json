@@ -1,0 +1,1363 @@
+[
+  {
+    "id": 1,
+    "name": "Northwind Traders",
+    "status": "active",
+    "memberCount": 42,
+    "owner": {
+      "email": "ops@northwind.example"
+    },
+    "createdAt": "2024-03-11T09:12:00Z"
+  },
+  {
+    "id": 2,
+    "name": "",
+    "status": "ACTIVE",
+    "memberCount": "12",
+    "owner": {
+      "email": "a@b.example"
+    },
+    "createdAt": 1710150720000
+  },
+  {
+    "id": 3,
+    "name": null,
+    "status": "Active",
+    "memberCount": -1,
+    "createdAt": "2024-01-02T00:00:00Z"
+  },
+  {
+    "id": 42,
+    "name": "Globex Corporation",
+    "status": "suspended",
+    "memberCount": 7,
+    "owner": {
+      "email": "hq@globex.example"
+    },
+    "createdAt": "2023-11-30T14:45:10Z"
+  },
+  {
+    "id": 42,
+    "name": "Globex Corporation Ltd",
+    "status": "actve",
+    "memberCount": 7,
+    "owner": {
+      "email": "hq@globex.example"
+    },
+    "createdAt": "2023-11-30T14:45:10Z"
+  },
+  {
+    "id": 6,
+    "name": "شركةالأمل🚀",
+    "status": "active",
+    "memberCount": 3,
+    "owner": {
+      "email": "info@amal.example"
+    },
+    "createdAt": "2025-06-01T08:00:00Z"
+  },
+  {
+    "id": 7,
+    "name": "The Very Long Organisation Name That Somebody Actually Typed Into The Field Because Nobody Validated It And It Keeps Going Well Past Any Reasonable Column Width And Still Has Not Stopped",
+    "status": "inactive",
+    "memberCount": 0,
+    "owner": {
+      "email": "long@example.com"
+    },
+    "createdAt": "2024-07-19T16:20:00Z"
+  },
+  {
+    "id": 8,
+    "name": "Initech",
+    "status": null,
+    "memberCount": null,
+    "owner": {
+      "email": "not-an-email"
+    },
+    "createdAt": "not a date"
+  },
+  {
+    "id": 100,
+    "name": "Acme Logistics",
+    "status": "ACTIVE",
+    "memberCount": 170,
+    "owner": {
+      "email": "admin@acmelogistics.example"
+    },
+    "createdAt": "2023-05-17T16:39:51.000Z"
+  },
+  {
+    "id": 101,
+    "name": "Blue Harbor Logistics",
+    "status": "suspended",
+    "memberCount": 204,
+    "owner": {
+      "email": "admin@blueharborlogistics.example"
+    },
+    "createdAt": "2024-05-04T02:37:59.000Z"
+  },
+  {
+    "id": 102,
+    "name": "Cedar Logistics",
+    "status": "active",
+    "memberCount": 11,
+    "owner": {
+      "email": "admin@cedarlogistics.example"
+    },
+    "createdAt": "2022-01-23T22:59:07.000Z"
+  },
+  {
+    "id": 103,
+    "name": "Delta Logistics",
+    "status": "Active",
+    "memberCount": 323,
+    "owner": {
+      "email": "admin@deltalogistics.example"
+    },
+    "createdAt": "2024-11-10T13:59:01.000Z"
+  },
+  {
+    "id": 104,
+    "name": "Evergreen Logistics",
+    "status": "inactive",
+    "memberCount": 146,
+    "owner": {
+      "email": "admin@evergreenlogistics.example"
+    },
+    "createdAt": "2023-12-16T08:16:27.000Z"
+  },
+  {
+    "id": 105,
+    "name": "Fjord Logistics",
+    "status": "active",
+    "memberCount": 59,
+    "owner": {
+      "email": "admin@fjordlogistics.example"
+    },
+    "createdAt": "2022-01-23T05:54:41.000Z"
+  },
+  {
+    "id": 106,
+    "name": "Granite Logistics",
+    "status": "actve",
+    "memberCount": 306,
+    "owner": {
+      "email": "admin@granitelogistics.example"
+    },
+    "createdAt": "2023-04-25T01:35:35.000Z"
+  },
+  {
+    "id": 107,
+    "name": "Helix Logistics",
+    "status": "active",
+    "memberCount": 329,
+    "owner": {
+      "email": "admin@helixlogistics.example"
+    },
+    "createdAt": "2024-03-21T00:28:59.000Z"
+  },
+  {
+    "id": 108,
+    "name": "Iris Logistics",
+    "status": "suspended",
+    "memberCount": 120,
+    "owner": {
+      "email": "admin@irislogistics.example"
+    },
+    "createdAt": "2023-02-22T04:59:38.000Z"
+  },
+  {
+    "id": 109,
+    "name": "Juniper Logistics",
+    "status": null,
+    "memberCount": 228,
+    "owner": {
+      "email": "admin@juniperlogistics.example"
+    },
+    "createdAt": "2023-11-24T08:54:15.000Z"
+  },
+  {
+    "id": 110,
+    "name": "Kestrel Logistics",
+    "status": "suspended",
+    "memberCount": 189,
+    "owner": {
+      "email": "admin@kestrellogistics.example"
+    },
+    "createdAt": "2023-02-01T17:11:24.000Z"
+  },
+  {
+    "id": 111,
+    "name": "Lumen Logistics",
+    "status": "active",
+    "memberCount": 25,
+    "owner": {
+      "email": "admin@lumenlogistics.example"
+    },
+    "createdAt": "2024-02-08T19:56:21.000Z"
+  },
+  {
+    "id": 112,
+    "name": "Meridian Logistics",
+    "status": " inactive ",
+    "memberCount": 386,
+    "owner": {
+      "email": "admin@meridianlogistics.example"
+    },
+    "createdAt": "2023-01-29T22:43:43.000Z"
+  },
+  {
+    "id": 113,
+    "name": "Nimbus Logistics",
+    "status": "active",
+    "memberCount": 169,
+    "owner": {
+      "email": "admin@nimbuslogistics.example"
+    },
+    "createdAt": "2024-06-04T01:50:08.000Z"
+  },
+  {
+    "id": 114,
+    "name": "Orchid Logistics",
+    "status": "suspended",
+    "memberCount": 184,
+    "owner": {
+      "email": "admin@orchidlogistics.example"
+    },
+    "createdAt": "2023-02-18T18:39:43.000Z"
+  },
+  {
+    "id": 115,
+    "name": "Pioneer Logistics",
+    "status": "active",
+    "memberCount": "328",
+    "owner": {
+      "email": "admin@pioneerlogistics.example"
+    },
+    "createdAt": "2022-12-08T13:44:37.000Z"
+  },
+  {
+    "id": 116,
+    "name": "Quartz Logistics",
+    "status": "active",
+    "memberCount": 203,
+    "owner": {
+      "email": "admin@quartzlogistics.example"
+    },
+    "createdAt": "2022-07-04T06:43:12.000Z"
+  },
+  {
+    "id": 117,
+    "name": "Riverbend Logistics",
+    "status": "active",
+    "memberCount": 57,
+    "owner": {
+      "email": "admin@riverbendlogistics.example"
+    },
+    "createdAt": "2024-02-11T18:38:25.000Z"
+  },
+  {
+    "id": 118,
+    "name": "Summit Logistics",
+    "status": "active",
+    "memberCount": -1,
+    "owner": {
+      "email": "admin@summitlogistics.example"
+    },
+    "createdAt": "2024-10-16T22:58:53.000Z"
+  },
+  {
+    "id": 119,
+    "name": "Tidewater Logistics",
+    "status": "inactive",
+    "memberCount": 282,
+    "owner": {
+      "email": "admin@tidewaterlogistics.example"
+    },
+    "createdAt": "2023-01-29T21:44:59.000Z"
+  },
+  {
+    "id": 120,
+    "name": "Umbra Logistics",
+    "status": "inactive",
+    "memberCount": 215,
+    "owner": {
+      "email": "admin@umbralogistics.example"
+    },
+    "createdAt": "2022-09-24T13:02:45.000Z"
+  },
+  {
+    "id": 121,
+    "name": "Vertex Logistics",
+    "status": "inactive",
+    "memberCount": null,
+    "owner": {
+      "email": "admin@vertexlogistics.example"
+    },
+    "createdAt": "2022-02-19T06:27:53.000Z"
+  },
+  {
+    "id": 122,
+    "name": "Willow Logistics",
+    "status": "active",
+    "memberCount": 304,
+    "owner": {
+      "email": "admin@willowlogistics.example"
+    },
+    "createdAt": "2025-01-26T08:42:21.000Z"
+  },
+  {
+    "id": 123,
+    "name": "Xenon Logistics",
+    "status": "active",
+    "memberCount": 292,
+    "owner": {
+      "email": "admin@xenonlogistics.example"
+    },
+    "createdAt": "2023-08-27T03:46:14.000Z"
+  },
+  {
+    "id": 124,
+    "name": "",
+    "status": "suspended",
+    "memberCount": 81,
+    "owner": {
+      "email": "admin@yarrowlogistics.example"
+    },
+    "createdAt": "2023-09-16T06:07:09.000Z"
+  },
+  {
+    "id": 125,
+    "name": "Zephyr Logistics",
+    "status": "active",
+    "memberCount": 134,
+    "owner": {
+      "email": "admin@zephyrlogistics.example"
+    },
+    "createdAt": "2022-05-04T07:09:55.000Z"
+  },
+  {
+    "id": 126,
+    "name": "Acme Health",
+    "status": "active",
+    "memberCount": 51,
+    "owner": {
+      "email": "admin@acmehealth.example"
+    },
+    "createdAt": "2022-08-13T01:28:47.000Z"
+  },
+  {
+    "id": 127,
+    "name": null,
+    "status": "active",
+    "memberCount": 140,
+    "owner": {
+      "email": "admin@blueharborhealth.example"
+    },
+    "createdAt": "2023-03-16T21:04:54.000Z"
+  },
+  {
+    "id": 128,
+    "name": "Cedar Health",
+    "status": "suspended",
+    "memberCount": 97,
+    "owner": {
+      "email": "admin@cedarhealth.example"
+    },
+    "createdAt": "2023-06-11T16:11:23.000Z"
+  },
+  {
+    "id": 129,
+    "name": "Delta Health",
+    "status": "active",
+    "memberCount": 97,
+    "owner": {
+      "email": "admin@deltahealth.example"
+    },
+    "createdAt": "2022-09-30T02:48:35.000Z"
+  },
+  {
+    "id": 130,
+    "name": "  Evergreen Health  ",
+    "status": "active",
+    "memberCount": 7,
+    "owner": {
+      "email": "admin@evergreenhealth.example"
+    },
+    "createdAt": "2023-08-30T15:31:57.000Z"
+  },
+  {
+    "id": 131,
+    "name": "Fjord Health",
+    "status": "inactive",
+    "memberCount": 218,
+    "owner": {
+      "email": "admin@fjordhealth.example"
+    },
+    "createdAt": "2022-05-18T09:55:06.000Z"
+  },
+  {
+    "id": 132,
+    "name": "Granite Health",
+    "status": "active",
+    "memberCount": 23,
+    "owner": {
+      "email": "admin@granitehealth.example"
+    },
+    "createdAt": "2023-12-04T08:50:34.000Z"
+  },
+  {
+    "id": 133,
+    "name": "Helix Health",
+    "status": "active",
+    "memberCount": 8,
+    "createdAt": "2024-10-24T01:10:37.000Z"
+  },
+  {
+    "id": 134,
+    "name": "Iris Health",
+    "status": "active",
+    "memberCount": 219,
+    "owner": {
+      "email": "admin@irishealth.example"
+    },
+    "createdAt": "2024-12-24T19:10:48.000Z"
+  },
+  {
+    "id": 135,
+    "name": "Juniper Health",
+    "status": "active",
+    "memberCount": 349,
+    "owner": {
+      "email": "admin@juniperhealth.example"
+    },
+    "createdAt": "2023-04-15T10:58:39.000Z"
+  },
+  {
+    "id": 136,
+    "name": "Kestrel Health",
+    "status": "active",
+    "memberCount": 304,
+    "owner": {
+      "email": "not-an-email"
+    },
+    "createdAt": "2023-12-15T18:29:58.000Z"
+  },
+  {
+    "id": 137,
+    "name": "Lumen Health",
+    "status": "suspended",
+    "memberCount": 15,
+    "owner": {
+      "email": "admin@lumenhealth.example"
+    },
+    "createdAt": "2022-12-18T01:15:23.000Z"
+  },
+  {
+    "id": 138,
+    "name": "Meridian Health",
+    "status": "active",
+    "memberCount": 240,
+    "owner": {
+      "email": "admin@meridianhealth.example"
+    },
+    "createdAt": "2023-02-22T20:19:27.000Z"
+  },
+  {
+    "id": 139,
+    "name": "Nimbus Health",
+    "status": "active",
+    "memberCount": 212,
+    "owner": {
+      "email": "admin@nimbushealth.example"
+    },
+    "createdAt": 1652108099000
+  },
+  {
+    "id": 140,
+    "name": "Orchid Health",
+    "status": "active",
+    "memberCount": 101,
+    "owner": {
+      "email": "admin@orchidhealth.example"
+    },
+    "createdAt": "2025-02-03T17:55:01.000Z"
+  },
+  {
+    "id": 141,
+    "name": "Pioneer Health",
+    "status": "inactive",
+    "memberCount": 336,
+    "owner": {
+      "email": "admin@pioneerhealth.example"
+    },
+    "createdAt": "2023-08-29T06:44:55.000Z"
+  },
+  {
+    "id": 142,
+    "name": "Quartz Health",
+    "status": "active",
+    "memberCount": 344,
+    "owner": {
+      "email": "admin@quartzhealth.example"
+    },
+    "createdAt": "not a date"
+  },
+  {
+    "id": 143,
+    "name": "Riverbend Health",
+    "status": "active",
+    "memberCount": 168,
+    "owner": {
+      "email": "admin@riverbendhealth.example"
+    },
+    "createdAt": "2022-10-19T23:51:14.000Z"
+  },
+  {
+    "id": 144,
+    "name": "Summit Health",
+    "status": "suspended",
+    "memberCount": 112,
+    "owner": {
+      "email": "admin@summithealth.example"
+    },
+    "createdAt": "2024-06-26T03:41:19.000Z"
+  },
+  {
+    "id": 144,
+    "name": "Tidewater Health",
+    "status": "active",
+    "memberCount": 81,
+    "owner": {
+      "email": "admin@tidewaterhealth.example"
+    },
+    "createdAt": "2025-02-04T15:33:54.000Z"
+  },
+  {
+    "id": 146,
+    "name": "Umbra Health",
+    "status": "inactive",
+    "memberCount": 358,
+    "owner": {
+      "email": "admin@umbrahealth.example"
+    },
+    "createdAt": "2024-04-27T13:38:19.000Z"
+  },
+  {
+    "id": 147,
+    "name": "Vertex Health",
+    "status": "inactive",
+    "memberCount": 84,
+    "owner": {
+      "email": "admin@vertexhealth.example"
+    },
+    "createdAt": "2024-03-17T16:52:09.000Z"
+  },
+  {
+    "id": 148,
+    "name": "Willow Health ✨",
+    "status": "active",
+    "memberCount": 198,
+    "owner": {
+      "email": "admin@willowhealth.example"
+    },
+    "createdAt": "2024-01-30T09:44:35.000Z"
+  },
+  {
+    "id": 149,
+    "name": "Xenon Health",
+    "status": "active",
+    "memberCount": 207,
+    "owner": {
+      "email": "admin@xenonhealth.example"
+    },
+    "createdAt": "2023-04-12T16:02:11.000Z"
+  },
+  {
+    "id": 150,
+    "name": "Yarrow Health",
+    "status": "active",
+    "memberCount": 385,
+    "owner": {
+      "email": "admin@yarrowhealth.example"
+    },
+    "createdAt": "2022-09-10T02:03:35.000Z"
+  },
+  {
+    "id": 151,
+    "name": "شركة النور",
+    "status": "active",
+    "memberCount": 177,
+    "owner": {
+      "email": "admin@zephyrhealth.example"
+    },
+    "createdAt": "2023-07-30T20:36:38.000Z"
+  },
+  {
+    "id": 152,
+    "name": "Acme Analytics",
+    "status": "active",
+    "memberCount": 247,
+    "owner": {
+      "email": "admin@acmeanalytics.example"
+    },
+    "createdAt": "2024-09-24T12:23:36.000Z"
+  },
+  {
+    "id": 153,
+    "name": "Blue Harbor Analytics",
+    "status": "inactive",
+    "memberCount": 323,
+    "owner": {
+      "email": "admin@blueharboranalytics.example"
+    },
+    "createdAt": "2022-12-17T06:38:23.000Z"
+  },
+  {
+    "id": 154,
+    "name": "Cedar Analytics Regional Division That Handles Every Enquiry Nobody Else Wanted And Kept The Full Registered Name",
+    "status": "active",
+    "memberCount": 87,
+    "owner": {
+      "email": "admin@cedaranalytics.example"
+    },
+    "createdAt": "2024-03-28T07:18:13.000Z"
+  },
+  {
+    "id": 155,
+    "name": "Delta Analytics",
+    "status": "active",
+    "memberCount": 101,
+    "owner": {
+      "email": "admin@deltaanalytics.example"
+    },
+    "createdAt": "2023-03-11T09:11:47.000Z"
+  },
+  {
+    "id": 156,
+    "name": "Evergreen Analytics",
+    "status": "active",
+    "memberCount": 362,
+    "owner": {
+      "email": "admin@evergreenanalytics.example"
+    },
+    "createdAt": "2025-01-02T23:57:26.000Z"
+  },
+  {
+    "id": 157,
+    "name": "globex corporation",
+    "status": "active",
+    "memberCount": 151,
+    "owner": {
+      "email": "admin@fjordanalytics.example"
+    },
+    "createdAt": "2024-02-26T06:43:53.000Z"
+  },
+  {
+    "id": 158,
+    "name": "Granite Analytics",
+    "status": "inactive",
+    "memberCount": 218,
+    "owner": {
+      "email": "admin@graniteanalytics.example"
+    },
+    "createdAt": "2023-01-29T17:59:42.000Z"
+  },
+  {
+    "id": 159,
+    "name": "Helix Analytics",
+    "status": "inactive",
+    "memberCount": 207,
+    "owner": {
+      "email": "admin@helixanalytics.example"
+    },
+    "createdAt": "2022-08-07T11:54:14.000Z"
+  },
+  {
+    "id": 160,
+    "name": "Iris Analytics",
+    "status": "ACTIVE",
+    "memberCount": 328,
+    "owner": {
+      "email": "admin@irisanalytics.example"
+    },
+    "createdAt": "2024-11-15T16:32:32.000Z"
+  },
+  {
+    "id": 161,
+    "name": "Juniper Analytics",
+    "status": "inactive",
+    "memberCount": 382,
+    "owner": {
+      "email": "admin@juniperanalytics.example"
+    },
+    "createdAt": "2025-01-06T13:26:36.000Z"
+  },
+  {
+    "id": 162,
+    "name": "Kestrel Analytics",
+    "status": "active",
+    "memberCount": 148,
+    "owner": {
+      "email": "admin@kestrelanalytics.example"
+    },
+    "createdAt": "2023-12-31T05:45:30.000Z"
+  },
+  {
+    "id": 163,
+    "name": "Lumen Analytics",
+    "status": "Active",
+    "memberCount": 35,
+    "owner": {
+      "email": "admin@lumenanalytics.example"
+    },
+    "createdAt": "2024-02-25T02:26:57.000Z"
+  },
+  {
+    "id": 164,
+    "name": "Meridian Analytics",
+    "status": "active",
+    "memberCount": 203,
+    "owner": {
+      "email": "admin@meridiananalytics.example"
+    },
+    "createdAt": "2025-02-08T11:52:52.000Z"
+  },
+  {
+    "id": 165,
+    "name": "Nimbus Analytics",
+    "status": "active",
+    "memberCount": 67,
+    "owner": {
+      "email": "admin@nimbusanalytics.example"
+    },
+    "createdAt": "2022-07-22T00:11:09.000Z"
+  },
+  {
+    "id": 166,
+    "name": "Orchid Analytics",
+    "status": "actve",
+    "memberCount": 186,
+    "owner": {
+      "email": "admin@orchidanalytics.example"
+    },
+    "createdAt": "2022-10-09T15:46:33.000Z"
+  },
+  {
+    "id": 167,
+    "name": "Pioneer Analytics",
+    "status": "inactive",
+    "memberCount": 238,
+    "owner": {
+      "email": "admin@pioneeranalytics.example"
+    },
+    "createdAt": "2024-04-18T15:22:48.000Z"
+  },
+  {
+    "id": 168,
+    "name": "Quartz Analytics",
+    "status": "suspended",
+    "memberCount": 98,
+    "owner": {
+      "email": "admin@quartzanalytics.example"
+    },
+    "createdAt": "2024-02-14T12:58:49.000Z"
+  },
+  {
+    "id": 169,
+    "name": "Riverbend Analytics",
+    "status": null,
+    "memberCount": 315,
+    "owner": {
+      "email": "admin@riverbendanalytics.example"
+    },
+    "createdAt": "2024-06-01T03:01:05.000Z"
+  },
+  {
+    "id": 170,
+    "name": "Summit Analytics",
+    "status": "inactive",
+    "memberCount": 2,
+    "owner": {
+      "email": "admin@summitanalytics.example"
+    },
+    "createdAt": "2023-03-11T03:15:10.000Z"
+  },
+  {
+    "id": 171,
+    "name": "Tidewater Analytics",
+    "status": "suspended",
+    "memberCount": 239,
+    "owner": {
+      "email": "admin@tidewateranalytics.example"
+    },
+    "createdAt": "2022-06-04T16:38:31.000Z"
+  },
+  {
+    "id": 172,
+    "name": "Umbra Analytics",
+    "status": " inactive ",
+    "memberCount": 3,
+    "owner": {
+      "email": "admin@umbraanalytics.example"
+    },
+    "createdAt": "2022-04-24T05:37:09.000Z"
+  },
+  {
+    "id": 173,
+    "name": "Vertex Analytics",
+    "status": "inactive",
+    "memberCount": 121,
+    "owner": {
+      "email": "admin@vertexanalytics.example"
+    },
+    "createdAt": "2023-08-22T02:08:49.000Z"
+  },
+  {
+    "id": 174,
+    "name": "Willow Analytics",
+    "status": "suspended",
+    "memberCount": 60,
+    "owner": {
+      "email": "admin@willowanalytics.example"
+    },
+    "createdAt": "2024-12-17T02:55:06.000Z"
+  },
+  {
+    "id": 175,
+    "name": "Xenon Analytics",
+    "status": "inactive",
+    "memberCount": "60",
+    "owner": {
+      "email": "admin@xenonanalytics.example"
+    },
+    "createdAt": "2025-03-07T01:04:44.000Z"
+  },
+  {
+    "id": 176,
+    "name": "Yarrow Analytics",
+    "status": "active",
+    "memberCount": 12,
+    "owner": {
+      "email": "admin@yarrowanalytics.example"
+    },
+    "createdAt": "2023-01-23T07:51:03.000Z"
+  },
+  {
+    "id": 177,
+    "name": "Zephyr Analytics",
+    "status": "active",
+    "memberCount": 190,
+    "owner": {
+      "email": "admin@zephyranalytics.example"
+    },
+    "createdAt": "2022-08-29T19:25:44.000Z"
+  },
+  {
+    "id": 178,
+    "name": "Acme Foods",
+    "status": "active",
+    "memberCount": -1,
+    "owner": {
+      "email": "admin@acmefoods.example"
+    },
+    "createdAt": "2024-09-22T10:31:28.000Z"
+  },
+  {
+    "id": 179,
+    "name": "Blue Harbor Foods",
+    "status": "active",
+    "memberCount": 145,
+    "owner": {
+      "email": "admin@blueharborfoods.example"
+    },
+    "createdAt": "2024-06-28T17:56:00.000Z"
+  },
+  {
+    "id": 180,
+    "name": "Cedar Foods",
+    "status": "active",
+    "memberCount": 147,
+    "owner": {
+      "email": "admin@cedarfoods.example"
+    },
+    "createdAt": "2023-11-30T23:30:07.000Z"
+  },
+  {
+    "id": 181,
+    "name": "Delta Foods",
+    "status": "suspended",
+    "memberCount": null,
+    "owner": {
+      "email": "admin@deltafoods.example"
+    },
+    "createdAt": "2024-07-04T23:52:04.000Z"
+  },
+  {
+    "id": 182,
+    "name": "Evergreen Foods",
+    "status": "active",
+    "memberCount": 63,
+    "owner": {
+      "email": "admin@evergreenfoods.example"
+    },
+    "createdAt": "2023-08-27T08:20:50.000Z"
+  },
+  {
+    "id": 183,
+    "name": "Fjord Foods",
+    "status": "inactive",
+    "memberCount": 384,
+    "owner": {
+      "email": "admin@fjordfoods.example"
+    },
+    "createdAt": "2024-11-17T04:20:47.000Z"
+  },
+  {
+    "id": 184,
+    "name": "",
+    "status": "inactive",
+    "memberCount": 181,
+    "owner": {
+      "email": "admin@granitefoods.example"
+    },
+    "createdAt": "2024-03-05T19:40:21.000Z"
+  },
+  {
+    "id": 185,
+    "name": "Helix Foods",
+    "status": "active",
+    "memberCount": 230,
+    "owner": {
+      "email": "admin@helixfoods.example"
+    },
+    "createdAt": "2023-12-15T05:07:00.000Z"
+  },
+  {
+    "id": 186,
+    "name": "Iris Foods",
+    "status": "suspended",
+    "memberCount": 114,
+    "owner": {
+      "email": "admin@irisfoods.example"
+    },
+    "createdAt": "2025-03-13T14:41:08.000Z"
+  },
+  {
+    "id": 187,
+    "name": null,
+    "status": "active",
+    "memberCount": 340,
+    "owner": {
+      "email": "admin@juniperfoods.example"
+    },
+    "createdAt": "2024-10-10T02:51:27.000Z"
+  },
+  {
+    "id": 188,
+    "name": "Kestrel Foods",
+    "status": "active",
+    "memberCount": 271,
+    "owner": {
+      "email": "admin@kestrelfoods.example"
+    },
+    "createdAt": "2022-08-30T00:14:09.000Z"
+  },
+  {
+    "id": 189,
+    "name": "Lumen Foods",
+    "status": "active",
+    "memberCount": 184,
+    "owner": {
+      "email": "admin@lumenfoods.example"
+    },
+    "createdAt": "2024-12-24T22:58:35.000Z"
+  },
+  {
+    "id": 190,
+    "name": "  Meridian Foods  ",
+    "status": "active",
+    "memberCount": 271,
+    "owner": {
+      "email": "admin@meridianfoods.example"
+    },
+    "createdAt": "2022-12-17T13:21:44.000Z"
+  },
+  {
+    "id": 191,
+    "name": "Nimbus Foods",
+    "status": "inactive",
+    "memberCount": 275,
+    "owner": {
+      "email": "admin@nimbusfoods.example"
+    },
+    "createdAt": "2024-02-09T18:54:17.000Z"
+  },
+  {
+    "id": 192,
+    "name": "Orchid Foods",
+    "status": "active",
+    "memberCount": 372,
+    "owner": {
+      "email": "admin@orchidfoods.example"
+    },
+    "createdAt": "2025-04-13T07:20:21.000Z"
+  },
+  {
+    "id": 193,
+    "name": "Pioneer Foods",
+    "status": "active",
+    "memberCount": 16,
+    "createdAt": "2022-02-01T16:53:47.000Z"
+  },
+  {
+    "id": 194,
+    "name": "Quartz Foods",
+    "status": "active",
+    "memberCount": 328,
+    "owner": {
+      "email": "admin@quartzfoods.example"
+    },
+    "createdAt": "2024-09-27T03:13:24.000Z"
+  },
+  {
+    "id": 195,
+    "name": "Riverbend Foods",
+    "status": "active",
+    "memberCount": 170,
+    "owner": {
+      "email": "admin@riverbendfoods.example"
+    },
+    "createdAt": "2022-01-20T22:19:27.000Z"
+  },
+  {
+    "id": 196,
+    "name": "Summit Foods",
+    "status": "active",
+    "memberCount": 72,
+    "owner": {
+      "email": "not-an-email"
+    },
+    "createdAt": "2023-01-28T02:54:08.000Z"
+  },
+  {
+    "id": 197,
+    "name": "Tidewater Foods",
+    "status": "inactive",
+    "memberCount": 353,
+    "owner": {
+      "email": "admin@tidewaterfoods.example"
+    },
+    "createdAt": "2024-04-26T23:28:31.000Z"
+  },
+  {
+    "id": 198,
+    "name": "Umbra Foods",
+    "status": "active",
+    "memberCount": 220,
+    "owner": {
+      "email": "admin@umbrafoods.example"
+    },
+    "createdAt": "2023-12-21T23:38:18.000Z"
+  },
+  {
+    "id": 199,
+    "name": "Vertex Foods",
+    "status": "suspended",
+    "memberCount": 355,
+    "owner": {
+      "email": "admin@vertexfoods.example"
+    },
+    "createdAt": 1724446261000
+  },
+  {
+    "id": 200,
+    "name": "Willow Foods",
+    "status": "active",
+    "memberCount": 8,
+    "owner": {
+      "email": "admin@willowfoods.example"
+    },
+    "createdAt": "2022-10-22T14:07:08.000Z"
+  },
+  {
+    "id": 201,
+    "name": "Xenon Foods",
+    "status": "active",
+    "memberCount": 84,
+    "owner": {
+      "email": "admin@xenonfoods.example"
+    },
+    "createdAt": "2023-06-07T09:57:32.000Z"
+  },
+  {
+    "id": 202,
+    "name": "Yarrow Foods",
+    "status": "active",
+    "memberCount": 246,
+    "owner": {
+      "email": "admin@yarrowfoods.example"
+    },
+    "createdAt": "not a date"
+  },
+  {
+    "id": 203,
+    "name": "Zephyr Foods",
+    "status": "inactive",
+    "memberCount": 134,
+    "owner": {
+      "email": "admin@zephyrfoods.example"
+    },
+    "createdAt": "2022-10-06T13:37:01.000Z"
+  },
+  {
+    "id": 204,
+    "name": "Acme Energy",
+    "status": "active",
+    "memberCount": 100,
+    "owner": {
+      "email": "admin@acmeenergy.example"
+    },
+    "createdAt": "2024-12-29T14:57:23.000Z"
+  },
+  {
+    "id": 204,
+    "name": "Blue Harbor Energy",
+    "status": "active",
+    "memberCount": 181,
+    "owner": {
+      "email": "admin@blueharborenergy.example"
+    },
+    "createdAt": "2024-06-30T19:44:34.000Z"
+  },
+  {
+    "id": 206,
+    "name": "Cedar Energy",
+    "status": "active",
+    "memberCount": 99,
+    "owner": {
+      "email": "admin@cedarenergy.example"
+    },
+    "createdAt": "2024-09-27T21:13:31.000Z"
+  },
+  {
+    "id": 207,
+    "name": "Delta Energy",
+    "status": "suspended",
+    "memberCount": 4,
+    "owner": {
+      "email": "admin@deltaenergy.example"
+    },
+    "createdAt": "2022-10-13T16:39:18.000Z"
+  },
+  {
+    "id": 208,
+    "name": "Evergreen Energy ✨",
+    "status": "active",
+    "memberCount": 168,
+    "owner": {
+      "email": "admin@evergreenenergy.example"
+    },
+    "createdAt": "2024-12-07T23:39:20.000Z"
+  },
+  {
+    "id": 209,
+    "name": "Fjord Energy",
+    "status": "suspended",
+    "memberCount": 107,
+    "owner": {
+      "email": "admin@fjordenergy.example"
+    },
+    "createdAt": "2022-10-21T22:19:55.000Z"
+  },
+  {
+    "id": 210,
+    "name": "Granite Energy",
+    "status": "inactive",
+    "memberCount": 311,
+    "owner": {
+      "email": "admin@graniteenergy.example"
+    },
+    "createdAt": "2022-09-20T17:59:50.000Z"
+  },
+  {
+    "id": 211,
+    "name": "مؤسسة الفجر",
+    "status": "inactive",
+    "memberCount": 193,
+    "owner": {
+      "email": "admin@helixenergy.example"
+    },
+    "createdAt": "2024-03-30T02:27:57.000Z"
+  },
+  {
+    "id": 212,
+    "name": "Iris Energy",
+    "status": "active",
+    "memberCount": 8,
+    "owner": {
+      "email": "admin@irisenergy.example"
+    },
+    "createdAt": "2024-09-18T09:48:16.000Z"
+  },
+  {
+    "id": 213,
+    "name": "Juniper Energy",
+    "status": "active",
+    "memberCount": 209,
+    "owner": {
+      "email": "admin@juniperenergy.example"
+    },
+    "createdAt": "2024-06-03T20:20:36.000Z"
+  },
+  {
+    "id": 214,
+    "name": "Kestrel Energy Regional Division That Handles Every Enquiry Nobody Else Wanted And Kept The Full Registered Name",
+    "status": "active",
+    "memberCount": 319,
+    "owner": {
+      "email": "admin@kestrelenergy.example"
+    },
+    "createdAt": "2022-07-06T21:18:03.000Z"
+  },
+  {
+    "id": 215,
+    "name": "Lumen Energy",
+    "status": "active",
+    "memberCount": 132,
+    "owner": {
+      "email": "admin@lumenenergy.example"
+    },
+    "createdAt": "2022-01-05T09:22:48.000Z"
+  },
+  {
+    "id": 216,
+    "name": "Meridian Energy",
+    "status": "active",
+    "memberCount": 342,
+    "owner": {
+      "email": "admin@meridianenergy.example"
+    },
+    "createdAt": "2022-03-07T23:17:38.000Z"
+  },
+  {
+    "id": 217,
+    "name": "globex corporation",
+    "status": "active",
+    "memberCount": 326,
+    "owner": {
+      "email": "admin@nimbusenergy.example"
+    },
+    "createdAt": "2022-07-20T23:37:34.000Z"
+  },
+  {
+    "id": 218,
+    "name": "Orchid Energy",
+    "status": "active",
+    "memberCount": 78,
+    "owner": {
+      "email": "admin@orchidenergy.example"
+    },
+    "createdAt": "2023-11-25T19:16:36.000Z"
+  },
+  {
+    "id": 219,
+    "name": "Pioneer Energy",
+    "status": "active",
+    "memberCount": 248,
+    "owner": {
+      "email": "admin@pioneerenergy.example"
+    },
+    "createdAt": "2023-11-28T14:52:17.000Z"
+  },
+  {
+    "id": 220,
+    "name": "Quartz Energy",
+    "status": "ACTIVE",
+    "memberCount": 349,
+    "owner": {
+      "email": "admin@quartzenergy.example"
+    },
+    "createdAt": "2022-07-24T07:30:16.000Z"
+  },
+  {
+    "id": 221,
+    "name": "Riverbend Energy",
+    "status": "active",
+    "memberCount": 73,
+    "owner": {
+      "email": "admin@riverbendenergy.example"
+    },
+    "createdAt": "2023-08-10T03:11:36.000Z"
+  },
+  {
+    "id": 222,
+    "name": "Summit Energy",
+    "status": "active",
+    "memberCount": 393,
+    "owner": {
+      "email": "admin@summitenergy.example"
+    },
+    "createdAt": "2022-06-05T05:25:07.000Z"
+  },
+  {
+    "id": 223,
+    "name": "Tidewater Energy",
+    "status": "Active",
+    "memberCount": 390,
+    "owner": {
+      "email": "admin@tidewaterenergy.example"
+    },
+    "createdAt": "2024-02-24T06:07:36.000Z"
+  },
+  {
+    "id": 224,
+    "name": "Umbra Energy",
+    "status": "active",
+    "memberCount": 272,
+    "owner": {
+      "email": "admin@umbraenergy.example"
+    },
+    "createdAt": "2024-11-21T15:33:59.000Z"
+  },
+  {
+    "id": 225,
+    "name": "Vertex Energy",
+    "status": "active",
+    "memberCount": 333,
+    "owner": {
+      "email": "admin@vertexenergy.example"
+    },
+    "createdAt": "2024-07-24T05:20:14.000Z"
+  },
+  {
+    "id": 226,
+    "name": "Willow Energy",
+    "status": "actve",
+    "memberCount": 115,
+    "owner": {
+      "email": "admin@willowenergy.example"
+    },
+    "createdAt": "2022-03-14T05:01:28.000Z"
+  },
+  {
+    "id": 227,
+    "name": "Xenon Energy",
+    "status": "inactive",
+    "memberCount": 127,
+    "owner": {
+      "email": "admin@xenonenergy.example"
+    },
+    "createdAt": "2024-07-01T22:47:36.000Z"
+  },
+  {
+    "id": 228,
+    "name": "Yarrow Energy",
+    "status": "suspended",
+    "memberCount": 176,
+    "owner": {
+      "email": "admin@yarrowenergy.example"
+    },
+    "createdAt": "2023-05-31T18:19:13.000Z"
+  }
+]

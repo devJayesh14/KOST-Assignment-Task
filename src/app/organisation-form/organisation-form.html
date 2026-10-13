@@ -1,0 +1,162 @@
+<div class="drawer-root">
+  <div class="backdrop" (click)="dismiss.emit()"></div>
+  <div
+    class="drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="create-organisation-title"
+    aria-describedby="create-organisation-description"
+    (keydown.escape)="dismiss.emit()"
+  >
+    <div class="drawer__header">
+      <div class="drawer__intro">
+        <h2 id="create-organisation-title" class="drawer__title">{{ 'form.title' | translate }}</h2>
+        <p id="create-organisation-description" class="drawer__description">
+          {{ 'form.description' | translate }}
+        </p>
+      </div>
+      <button type="button" class="icon-button" (click)="dismiss.emit()">
+        <span class="visually-hidden">{{ 'form.close' | translate }}</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M6 6 14 14" />
+          <path d="M14 6 6 14" />
+        </svg>
+      </button>
+    </div>
+
+    <form class="form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      @if (summaryVisible()) {
+        <div #summary class="summary" role="alert" tabindex="-1">
+          <p class="summary__title">{{ 'form.summaryTitle' | translate }}</p>
+          @if (serverError()) {
+            <p class="summary__text">{{ 'form.errors.server' | translate }}</p>
+          }
+          @if (summaryItems().length > 0) {
+            <ul class="summary__list">
+              @for (item of summaryItems(); track item.name) {
+                <li>
+                  <button type="button" class="link-button" (click)="focusField(item.inputId)">
+                    {{ item.labelKey | translate }}: {{ item.errorKey | translate: nameLimits }}
+                  </button>
+                </li>
+              }
+            </ul>
+          }
+        </div>
+      }
+
+      <div class="field">
+        <label class="field__label" for="org-name">
+          {{ 'form.nameLabel' | translate }}
+          <span class="required" aria-hidden="true">*</span>
+          <span class="visually-hidden">({{ 'form.required' | translate }})</span>
+        </label>
+        <input
+          #nameInput
+          id="org-name"
+          class="control field__control"
+          formControlName="name"
+          type="text"
+          dir="auto"
+          autocomplete="organization"
+          aria-required="true"
+          aria-describedby="org-name-message"
+          [attr.aria-invalid]="errorKey('name') ? 'true' : null"
+        />
+        <p class="field__message" id="org-name-message" aria-live="polite">
+          @if (errorKey('name'); as key) {
+            {{ key | translate: nameLimits }}
+          } @else if (isChecking('name')) {
+            <span class="field__hint">{{ 'form.checkingName' | translate }}</span>
+          }
+        </p>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="org-status">
+          {{ 'form.statusLabel' | translate }}
+          <span class="required" aria-hidden="true">*</span>
+          <span class="visually-hidden">({{ 'form.required' | translate }})</span>
+        </label>
+        <select
+          id="org-status"
+          class="control field__control"
+          formControlName="status"
+          aria-required="true"
+          aria-describedby="org-status-message"
+          [attr.aria-invalid]="errorKey('status') ? 'true' : null"
+        >
+          <option value="">{{ 'form.statusPlaceholder' | translate }}</option>
+          @for (option of statuses; track option) {
+            <option [value]="option">{{ 'status.' + option | translate }}</option>
+          }
+        </select>
+        <p class="field__message" id="org-status-message" aria-live="polite">
+          @if (errorKey('status'); as key) {
+            {{ key | translate }}
+          }
+        </p>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="org-owner-email">
+          {{ 'form.emailLabel' | translate }}
+          <span class="required" aria-hidden="true">*</span>
+          <span class="visually-hidden">({{ 'form.required' | translate }})</span>
+        </label>
+        <input
+          id="org-owner-email"
+          class="control field__control"
+          formControlName="ownerEmail"
+          type="email"
+          dir="ltr"
+          autocomplete="email"
+          aria-required="true"
+          aria-describedby="org-owner-email-message"
+          [attr.aria-invalid]="errorKey('ownerEmail') ? 'true' : null"
+        />
+        <p class="field__message" id="org-owner-email-message" aria-live="polite">
+          @if (errorKey('ownerEmail'); as key) {
+            {{ key | translate }}
+          }
+        </p>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="org-members">
+          {{ 'form.membersLabel' | translate }}
+          <span class="field__optional">({{ 'form.optional' | translate }})</span>
+        </label>
+        <input
+          id="org-members"
+          class="control field__control"
+          formControlName="memberCount"
+          type="number"
+          min="0"
+          step="1"
+          inputmode="numeric"
+          aria-describedby="org-members-message"
+          [attr.aria-invalid]="errorKey('memberCount') ? 'true' : null"
+        />
+        <p class="field__message" id="org-members-message" aria-live="polite">
+          @if (errorKey('memberCount'); as key) {
+            {{ key | translate }}
+          }
+        </p>
+      </div>
+
+      <div class="form__actions">
+        <button type="button" class="button button--ghost" (click)="dismiss.emit()">
+          {{ 'form.cancel' | translate }}
+        </button>
+        <button
+          type="submit"
+          class="button button--primary"
+          [attr.aria-disabled]="submitting() ? 'true' : null"
+        >
+          {{ (submitting() ? 'form.submitting' : 'form.submit') | translate }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

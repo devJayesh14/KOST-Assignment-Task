@@ -1,0 +1,54 @@
+<a class="skip-link" href="#directory" (click)="skipToContent($event)">
+  {{ 'app.skipToContent' | translate }}
+</a>
+
+<div class="page" [attr.inert]="drawerOpen() ? '' : null">
+  <app-header (addOrganisation)="openDrawer()" />
+
+  <main #main id="directory" class="container main" tabindex="-1">
+    <app-directory-toolbar
+      [searchText]="store.searchText()"
+      [status]="store.query().status"
+      [resultCount]="store.total()"
+      (searchTextChange)="store.searchText.set($event)"
+      (statusChange)="store.setStatus($event)"
+      (clearFilters)="store.clearFilters()"
+    />
+
+    <p class="visually-hidden" role="status">{{ announcement() }}</p>
+
+    @let state = store.state();
+    @if (state.kind === 'error') {
+      <app-error-state
+        [reason]="state.reason"
+        [retryInSeconds]="store.retryInSeconds()"
+        (retry)="store.retry()"
+      />
+    } @else if (state.kind === 'loaded' && state.page.items.length === 0) {
+      <app-empty-state
+        [filtersActive]="store.filtersActive()"
+        (clearFilters)="store.clearFilters()"
+      />
+    } @else {
+      <app-organisation-table
+        [rows]="state.kind === 'loaded' ? state.page.items : []"
+        [loading]="state.kind === 'loading'"
+        [sort]="store.query().sort"
+        [order]="store.query().order"
+        (sortChange)="store.toggleSort($event)"
+      />
+      @if (state.kind === 'loaded') {
+        <app-pagination
+          [page]="state.page.page"
+          [pageSize]="pageSize"
+          [total]="state.page.total"
+          (pageChange)="store.setPage($event)"
+        />
+      }
+    }
+  </main>
+</div>
+
+@if (drawerOpen()) {
+  <app-organisation-form (dismiss)="closeDrawer()" (created)="onCreated($event)" />
+}

@@ -1,0 +1,97 @@
+<div class="table-scroll panel">
+  @if (loading()) {
+    <p class="visually-hidden" role="status">{{ 'table.loading' | translate }}</p>
+  }
+  <table class="table" [attr.aria-busy]="loading()">
+    <caption class="visually-hidden">
+      {{ 'table.caption' | translate }}
+    </caption>
+    <colgroup>
+      <col class="col-organisation" />
+      <col class="col-status" />
+      <col class="col-members" />
+      <col class="col-owner" />
+      <col class="col-created" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col" [attr.aria-sort]="ariaSort('name')">
+          <button type="button" class="sort-button" (click)="sortChange.emit('name')">
+            <span>{{ 'table.organisation' | translate }}</span>
+            <svg class="sort-icon" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M3.5 6.5 8 2.5l4.5 4" [class.is-active]="isSorted('name', 'asc')" />
+              <path d="M3.5 9.5 8 13.5l4.5-4" [class.is-active]="isSorted('name', 'desc')" />
+            </svg>
+          </button>
+        </th>
+        <th scope="col">{{ 'table.status' | translate }}</th>
+        <th scope="col" class="numeric">{{ 'table.members' | translate }}</th>
+        <th scope="col">{{ 'table.owner' | translate }}</th>
+        <th scope="col" [attr.aria-sort]="ariaSort('created')">
+          <button type="button" class="sort-button" (click)="sortChange.emit('created')">
+            <span>{{ 'table.created' | translate }}</span>
+            <svg class="sort-icon" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M3.5 6.5 8 2.5l4.5 4" [class.is-active]="isSorted('created', 'asc')" />
+              <path d="M3.5 9.5 8 13.5l4.5-4" [class.is-active]="isSorted('created', 'desc')" />
+            </svg>
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      @if (loading()) {
+        @for (row of skeletonRows; track row) {
+          <tr class="is-skeleton" aria-hidden="true">
+            <td><span class="skeleton skeleton--wide"></span></td>
+            <td><span class="skeleton skeleton--short"></span></td>
+            <td><span class="skeleton skeleton--short skeleton--end"></span></td>
+            <td><span class="skeleton skeleton--wide"></span></td>
+            <td><span class="skeleton skeleton--medium"></span></td>
+          </tr>
+        }
+      } @else {
+        @for (row of rows(); track row.key) {
+          <tr>
+            <th scope="row">
+              @if (row.name) {
+                <span class="org-name" dir="auto" [attr.title]="row.name">{{ row.name }}</span>
+              } @else {
+                <span class="placeholder">{{ 'table.unnamed' | translate }}</span>
+              }
+            </th>
+            <td>
+              <app-status-badge [status]="row.status" [rawStatus]="row.rawStatus" />
+            </td>
+            <td class="numeric">
+              @if (row.memberCount === null) {
+                <span class="muted" aria-hidden="true">—</span>
+                <span class="visually-hidden">{{ 'table.notAvailable' | translate }}</span>
+              } @else {
+                {{ row.memberCount | number }}
+              }
+            </td>
+            <td>
+              @if (row.ownerEmail) {
+                <div class="owner">
+                  <span class="owner__email" dir="ltr" [attr.title]="row.ownerEmail">{{ row.ownerEmail }}</span>
+                  @if (!row.ownerEmailValid) {
+                    <span class="flag">{{ 'table.invalidEmail' | translate }}</span>
+                  }
+                </div>
+              } @else {
+                <span class="placeholder">{{ 'table.noOwner' | translate }}</span>
+              }
+            </td>
+            <td>
+              @if (row.createdAt) {
+                <time [attr.datetime]="row.createdAt.toISOString()">{{ row.createdAt | date: 'mediumDate' }}</time>
+              } @else {
+                <span class="placeholder">{{ 'table.unknownDate' | translate }}</span>
+              }
+            </td>
+          </tr>
+        }
+      }
+    </tbody>
+  </table>
+</div>

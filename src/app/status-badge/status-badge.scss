@@ -1,0 +1,44 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  white-space: nowrap;
+}
+
+.badge__dot {
+  width: var(--size-dot);
+  height: var(--size-dot);
+  border-radius: var(--radius-full);
+  background: currentColor;
+}
+
+.badge[data-status='active'] {
+  color: var(--color-status-active);
+  background: var(--color-status-active-bg);
+}
+
+.badge[data-status='inactive'] {
+  color: var(--color-status-inactive);
+  background: var(--color-status-inactive-bg);
+}
+
+.badge[data-status='suspended'] {
+  color: var(--color-status-suspended);
+  background: var(--color-status-suspended-bg);
+}
+
+.badge[data-status='unknown'] {
+  color: var(--color-status-unknown);
+  background: var(--color-status-unknown-bg);
+  cursor: help;
+}
+
+.badge[data-status='unknown'] .badge__dot {
+  background: transparent;
+  border: var(--border-width) dashed currentColor;
+}
