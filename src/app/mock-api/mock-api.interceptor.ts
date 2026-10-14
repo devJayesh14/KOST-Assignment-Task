@@ -21,6 +21,7 @@ const MAX_DELAY_MS = 900;
 const LIST_FAILURE_RATE = 0.15;
 const RATE_LIMIT_REQUESTS = 5;
 const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_STORAGE_KEY = 'organisation-directory.mock-api.list-request-times';
 const MAX_PAGE_SIZE = 25;
 const NAME_MIN = 3;
 const NAME_MAX = 80;
@@ -29,7 +30,7 @@ const KNOWN_STATUSES = ['active', 'inactive', 'suspended'];
 type RawRecord = Record<string, unknown>;
 
 const records: RawRecord[] = structuredClone(fixture as unknown as RawRecord[]);
-const listRequestTimes: number[] = [];
+let memoryRequestTimes: number[] = [];
 
 export const mockApiInterceptor: HttpInterceptorFn = (req, next) => {
   if (req.url === ORGANISATIONS_URL && req.method === 'GET') {
@@ -46,15 +47,13 @@ export const mockApiInterceptor: HttpInterceptorFn = (req, next) => {
 
 function listOrganisations(req: HttpRequest<unknown>): Observable<HttpEvent<unknown>> {
   const now = Date.now();
-  while (listRequestTimes.length > 0 && now - listRequestTimes[0] >= RATE_LIMIT_WINDOW_MS) {
-    listRequestTimes.shift();
-  }
+  const recent = loadRequestTimes().filter((time) => time <= now && now - time < RATE_LIMIT_WINDOW_MS);
 
-  if (listRequestTimes.length >= RATE_LIMIT_REQUESTS) {
-    const retryAfter = Math.ceil((listRequestTimes[0] + RATE_LIMIT_WINDOW_MS - now) / 1000);
+  if (recent.length >= RATE_LIMIT_REQUESTS) {
+    const retryAfter = Math.ceil((recent[0] + RATE_LIMIT_WINDOW_MS - now) / 1000);
     return reject(req, 429, { code: 'RATE_LIMITED' }, new HttpHeaders({ 'Retry-After': String(retryAfter) }));
   }
-  listRequestTimes.push(now);
+  saveRequestTimes([...recent, now]);
 
   if (Math.random() < LIST_FAILURE_RATE) {
     return reject(req, 503, { code: 'UNAVAILABLE' });
@@ -164,6 +163,30 @@ function errorResponse(
   headers?: HttpHeaders,
 ): HttpErrorResponse {
   return new HttpErrorResponse({ status, error: body, headers, url: req.url });
+}
+
+/**
+ * Request times live in localStorage, read fresh on every request, so reloads and other tabs share one limit,
+ * as they would against a real server. If storage is unavailable (privacy mode, quota), memory is used instead.
+ */
+function loadRequestTimes(): number[] {
+  try {
+    const stored: unknown = JSON.parse(localStorage.getItem(RATE_LIMIT_STORAGE_KEY) ?? '[]');
+    return Array.isArray(stored)
+      ? stored.filter((time): time is number => typeof time === 'number').sort((a, b) => a - b)
+      : [];
+  } catch {
+    return memoryRequestTimes;
+  }
+}
+
+function saveRequestTimes(times: number[]): void {
+  memoryRequestTimes = times;
+  try {
+    localStorage.setItem(RATE_LIMIT_STORAGE_KEY, JSON.stringify(times));
+  } catch {
+    // Kept in memory only.
+  }
 }
 
 function randomDelay(): number {

@@ -52,7 +52,8 @@ All cleaning happens in `src/app/data/normalize-organisation.ts`. The fixture is
 - **Mock API:** an `HttpInterceptorFn` (`src/app/mock-api`).
   - It adds a 400–900 ms delay, fails about 15% of list requests (503), and allows 5 list requests per rolling minute (429 with `Retry-After`).
   - Name checks and create requests are not rate-limited or randomly failed. The brief only specifies this for the list request.
-  - Data lives in memory and resets on reload.
+  - Request times for the rate limit are kept in `localStorage`, so reloading or opening a new tab does not reset the limit. After a reload during a 429, the first request gets a fresh 429 with the remaining `Retry-After`, and the countdown continues from there.
+  - Organisation data lives in memory and resets on reload.
   - I chose an interceptor over a separate mock server so the deployed demo needs no backend.
 - **Form:** a typed `NonNullableFormBuilder` form with `updateOn: 'blur'`.
   - Errors appear on blur, not on each keystroke.
