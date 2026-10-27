@@ -70,4 +70,4 @@ All cleaning happens in `src/app/data/normalize-organisation.ts`. The fixture is
 
 - **Tool:** Cursor (agent mode).
 - **Used for:** scaffolding the Angular project, the presentation components and styles, the design tokens, the fixture generator, the mock API, the store, normalisation, form validation, and drafting this document.
-- **My part:** _fill in honestly — e.g. reviewed every file, chose the conflict resolutions, tested the states in the browser, changed X and Y._
+- **My part:** I reviewed the assessment requirements, made the final decisions for both conflicts, and worked on understanding the application architecture and data flow. I tested the main user journeys and reviewed how the application handles messy fixture data. I am responsible for understanding and explaining the submitted implementation.
